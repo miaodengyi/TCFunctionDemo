@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:id="@+id/btn_gps_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F2F2F2"
+        android:text="方法1"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+    <Button
+        android:id="@+id/btn_gps_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F2F2F2"
+        android:text="方法2"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+    <Button
+        android:id="@+id/btn_gps_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F2F2F2"
+        android:text="方法3"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+    <Button
+        android:id="@+id/btn_gps_base_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F2F2F2"
+        android:text="地磁传感器定位"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+</LinearLayout>

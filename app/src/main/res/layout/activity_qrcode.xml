@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:id="@+id/btn_sweep_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#d3d3d3"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="扫描二维码"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_local_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#d3d3d3"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="解析本地二维码"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

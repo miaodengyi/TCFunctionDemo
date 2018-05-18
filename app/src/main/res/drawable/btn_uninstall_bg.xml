@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--按下去的时候-->
+    <item android:drawable="@drawable/uninstall_pressed" android:state_pressed="true"/>
+    <!--获取焦点的时候-->
+    <!--<item android:drawable="@drawable/normal_cancel_btn" android:state_focused="true"/>-->
+    <!--一般时候-->
+    <item android:drawable="@drawable/uninstall_normal"/>
+</selector>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/item_iv_hardware"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_bluetooth"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:id="@+id/item_tv_hardware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_iv_hardware"
+        android:layout_centerVertical="true"
+        android:text="蓝牙"
+        android:textColor="#333333"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:id="@+id/item_cb_hardware"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:button="@drawable/hardware_checkbox_bg"/>
+
+
+</RelativeLayout>

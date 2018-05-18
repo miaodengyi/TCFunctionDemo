@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_jihuo_bg">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/ic_police_pic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"/>
+
+    <EditText
+        android:id="@+id/et_police_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/et_bg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="请输入你的警号"
+        android:textColorHint="#c3c3c3"
+        android:textSize="15sp"
+        android:padding="16dp"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/btn_activate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_bg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="激活"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+</LinearLayout>

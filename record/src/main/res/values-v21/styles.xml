@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--没有标题栏-->
+    <style name="VoiceNoTitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">#189DAE</item>
+        <item name="android:navigationBarColor">#ffffff</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="VoiceTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">#189DAE</item>
+        <item name="colorPrimaryDark">#189DAE</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:statusBarColor">#189DAE</item>
+    </style>
+</resources>

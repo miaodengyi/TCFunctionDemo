@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.com.cybertech.tcfunctiondemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--读取log-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--录像权限-->
+    <!--硬件支持-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--获取手机sim卡信号-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--计步的权限-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+    <!--webView下载附件-->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <!--开机广播-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--跳出布局遮挡虚拟菜单栏和statusbar-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <!--震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.AppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DeleteFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ApkInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BatteryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SdcardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrintLogActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".util.LogObserverService" />
+        <activity
+            android:name=".activity.SdcardRecordActivity"
+            android:screenOrientation="portrait" />
+        <receiver android:name=".broadcast.SdcardBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <!--<activity-->
+        <!--android:name=".activity.CameraActivity"-->
+        <!--android:theme="@style/NoTitle" />-->
+        <activity
+            android:name=".activity.Md5Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PathActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SignalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GreenDaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OkHttpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StepCountActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.StepService" />
+
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PassDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CountDownTimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ShowBigImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GridViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ListViewSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MachineReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MdmPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MdmLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".activity.RestartActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".broadcast.BootReceive">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.InstallSlientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WindowManagerActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.WindowService" />
+
+        <activity
+            android:name=".activity.ActivateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".activity.WarningActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".activity.ImeiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TrafficStatsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GpsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GpsOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GpsTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GpsThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewMachineReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TrafficAppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BatteryHardwareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BatterySoftwareActivity"
+            android:screenOrientation="portrait" />
+        <!--跨进程通信的服务-->
+        <service
+            android:name=".aidl.AIDLService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.com.cybertech.tcfunctiondemo.aidl" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.SimInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".activity.QrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NfcActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GpsBaseStationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HardwareInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GifActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransforDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SkipAppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShakeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MaterialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TimeFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RootActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VoiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VoiceNoTitle" />
+        <activity
+            android:name=".activity.VoiceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VoiceTheme" />
+        <activity
+            android:name=".activity.TransforActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.record.activity.RecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VoiceNoTitle" />
+        <activity
+            android:name="com.example.record.activity.RecordListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VoiceTheme" />
+    </application>
+
+</manifest>

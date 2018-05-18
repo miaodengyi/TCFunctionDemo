@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:id="@+id/btn_show_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#F0F0F0"
+        android:text="显示悬浮窗"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/btn_dismiss_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#F0F0F0"
+        android:text="隐藏悬浮窗"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/btn_hide_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#F0F0F0"
+        android:text="隐藏虚拟菜单和状态栏"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/btn_full_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#F0F0F0"
+        android:text="全屏显示"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+</LinearLayout>
